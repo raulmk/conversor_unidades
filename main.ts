@@ -5,7 +5,7 @@ function opcion_usuari(): number {
 }
 
 function num_a_convertir(): number {
-    let num = game.askForNumber("Numero a convertir:")
+    let num = game.askForNumber("Temperatura:")
     return num
 }
 
@@ -16,11 +16,11 @@ function Main(opcio: number) {
     if (opcio == 1) {
         num_convertir = num_a_convertir()
         convertido = num_convertir * 9 / 5 + 32
-        game.showLongText("" + Math.roundWithPrecision(convertido, 2) + "°C", DialogLayout.Bottom)
+        game.showLongText("" + Math.roundWithPrecision(convertido, 2) + "°F", DialogLayout.Bottom)
     } else if (opcio == 2) {
         num_convertir = num_a_convertir()
         convertido = (num_convertir - 32) * 5 / 9
-        game.showLongText("" + Math.roundWithPrecision(convertido, 2) + "°F", DialogLayout.Bottom)
+        game.showLongText("" + Math.roundWithPrecision(convertido, 2) + "°C", DialogLayout.Bottom)
     } else {
         game.showLongText("No existe esa opción", DialogLayout.Top)
     }
